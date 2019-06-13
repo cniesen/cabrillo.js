@@ -4,7 +4,10 @@
   "description": "cabrillo Ham radio log conversion lib",
   "main": "dist/cabrillo.js",
   "scripts": {
-    "example": "node example/example.js"
+    "example": "node example/example.js",
+    "test": "mocha test/",
+    "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- test/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/YuYanDev/cabrillo.js/issues"
   },
-  "homepage": "https://github.com/YuYanDev/cabrillo.js#readme"
+  "homepage": "https://github.com/YuYanDev/cabrillo.js#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "istanbul": "^0.4.5"
+  }
 }
